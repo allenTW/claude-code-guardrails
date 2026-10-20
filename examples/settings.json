@@ -1,0 +1,13 @@
+{
+  "hooks": {
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "/usr/bin/python3 ~/.claude-guardrails/stop_gate.py", "timeout": 15 } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "*",
+        "hooks": [ { "type": "command", "command": "/usr/bin/python3 ~/.claude-guardrails/reserve_guard.py", "timeout": 5 } ] },
+      { "matcher": "Bash",
+        "hooks": [ { "type": "command", "command": "/usr/bin/python3 ~/.claude-guardrails/bash_guard.py", "timeout": 5 } ] }
+    ]
+  }
+}
