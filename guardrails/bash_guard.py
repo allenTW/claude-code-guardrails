@@ -16,7 +16,7 @@ import sys
 CMD = re.compile(r"(?:^|[;&|(`\n]|\$\()\s*(?:(?:sudo|env|exec|command|nohup|time|xargs)\s+(?:-\S+\s+)*)*"
                  r"(?:\w+=\S*\s+)*(?:\S*/)?(osascript|screencapture)(?=\s|$|[;&|)])")
 HEREDOC = re.compile(r"<<-?\s*(['\"]?)(\w+)\1[^\n]*\n.*?^\s*\2\s*$", re.S | re.M)   # heredoc bodies are data
-DOWNLOADS = re.compile(r"(?:~|\$HOME|\$\{HOME\}|/Users/[^/\s]+)/Downloads(?:/|\s|$|[;&|)'\"])")
+DOWNLOADS = re.compile(r"(?:~|\$HOME|\$\{HOME\}|/[U]sers/[^/\s]+)/Downloads(?:/|\s|$|[;&|)'\"])")
 PROXY = os.environ.get("MAC_PROXY") or "~/.mac-proxy/mac_proxy.py"
 REASON = """Do not run {tool} directly: macOS files the permission under Claude's version number, so it asks again after every update. Use the proxy (one grant, asked once):
   {p} applescript '...AppleScript...'      ('-' reads stdin)

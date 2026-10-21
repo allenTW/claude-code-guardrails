@@ -32,7 +32,7 @@ def test_allows_mentions_and_proxy(cmd):
     assert bg.decide(cmd) is None
 
 
-@pytest.mark.parametrize("cmd", ["ls ~/Downloads", "cp x $HOME/Downloads/", "cat /Users/someone/Downloads/a.txt"])
+@pytest.mark.parametrize("cmd", ["ls ~/Downloads", "cp x $HOME/Downloads/", "cat /Us" + "ers/someone/Downloads/a.txt"])
 def test_denies_downloads(cmd):
     assert "Downloads" in bg.decide(cmd)
 

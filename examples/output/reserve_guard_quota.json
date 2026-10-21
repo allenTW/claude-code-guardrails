@@ -1,0 +1,7 @@
+{
+  "hookSpecificOutput": {
+    "hookEventName": "PreToolUse",
+    "permissionDecision": "deny",
+    "permissionDecisionReason": "Quota reserve mode (96% used): chat and notes only, do not retry other tools. Start a new session or /clear to chat. Lift it: touch ~/.claude-guardrails/reserve-off"
+  }
+}

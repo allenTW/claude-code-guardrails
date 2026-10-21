@@ -1,0 +1,4 @@
+{
+  "decision": "block",
+  "reason": "Self-check before reporting failed: the report lists doable work as not done: tests not run, not committed, asks whether to continue. In order: (1) do what you can do now (run the tests, commit, push, restart, look at the page); (2) if a permission blocks it, say exactly which one; (3) only a real blocker (publishing, money, credentials, missing hardware) may stay in the 'not done' column, with what is blocking it."
+}

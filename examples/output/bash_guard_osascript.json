@@ -1,0 +1,7 @@
+{
+  "hookSpecificOutput": {
+    "hookEventName": "PreToolUse",
+    "permissionDecision": "deny",
+    "permissionDecisionReason": "Do not run osascript directly: macOS files the permission under Claude's version number, so it asks again after every update. Use the proxy (one grant, asked once):\n  ~/.mac-proxy/mac_proxy.py applescript '...AppleScript...'      ('-' reads stdin)\n  ~/.mac-proxy/mac_proxy.py jxa '...JXA...'\n  ~/.mac-proxy/mac_proxy.py screenshot /absolute/path.png [screencapture options]\n  ~/.mac-proxy/mac_proxy.py run COMMAND ARGS...                  (any other command that needs the proxy's grants)\n  --timeout SECONDS goes before the verb; from Python use `from mac_proxy import call`."
+  }
+}

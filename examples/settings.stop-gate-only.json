@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "/usr/bin/python3 ~/.claude-guardrails/stop_gate.py", "timeout": 15 } ] }
+    ]
+  }
+}

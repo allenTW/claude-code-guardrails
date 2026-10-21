@@ -1,0 +1,7 @@
+{
+  "hookSpecificOutput": {
+    "hookEventName": "PreToolUse",
+    "permissionDecision": "deny",
+    "permissionDecisionReason": "Do not read or write ~/Downloads directly: macOS files the permission under Claude's version number and asks again after every update. Use the proxy:\n  ~/.mac-proxy/mac_proxy.py run /bin/ls -la ~/Downloads\n  Python: from mac_proxy import call; call(\"run\", argv=[...])"
+  }
+}
