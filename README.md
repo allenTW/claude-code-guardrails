@@ -88,6 +88,12 @@ All settings are environment variables and plain files under `GUARDRAILS_HOME` (
 
 Tests: `python3 -m pip install pytest && python3 -m pytest -q tests` (39 tests, Python 3.9.6).
 
+## Background
+
+- Why these hooks exist, with real numbers (Traditional Chinese): https://sumertw.com/blog/ai-honest-stop-hook?utm_source=github&utm_medium=readme&utm_campaign=guardrails
+- What running agents all day actually costs (Traditional Chinese): https://sumertw.com/blog/compute-economics?utm_source=github&utm_medium=readme&utm_campaign=guardrails
+- More write-ups and the newsletter: https://sumertw.com/blog/?utm_source=github&utm_medium=readme&utm_campaign=guardrails
+
 ## 繁體中文簡介
 
 三個 Claude Code hook：`stop_gate`（收工前檢查清單未勾、寫過卻未 commit／push、把做得到的事列成「未做」，每次最多擋一次、任何錯誤一律放行）、`reserve_guard`（子代理必須指定 model、額度吃緊時擋重型工具）、`bash_guard`（擋直接呼叫 osascript／screencapture／Downloads，導向權限代理）。安裝：執行 `./install.sh`，再把 `examples/settings.json` 合併進 `~/.claude/settings.json`。測試：`python3 -m pytest -q tests`。
